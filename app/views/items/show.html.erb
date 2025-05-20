@@ -11,4 +11,8 @@
     <li>Size: <%= @item.size %></li>
     <li>Brand: <%= @item.brand %></li>
   </ul>
+  <div class='container'>
+    <h3>Create a new booking</h3>
+    <%= render 'bookings/booking_form', user: @item.user, item: @item %>
+  </div>
 </div>
