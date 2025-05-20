@@ -1,9 +1,9 @@
 require 'faker'
 
 puts 'Cleaning database...'
-Booking.delete_all
-User.delete_all
-Item.delete_all
+Booking.destroy_all
+User.destroy_all
+Item.destroy_all
 
 puts 'Creating users...'
 users = 10.times.map do
