@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   root "items#index"
 
   resources :items do
-    resources :bookings, only [:index, :new, :create]
+    resources :bookings, only: %i[index new create]
   end
 
-  resources :bookings, only [:show]
+  resources :bookings, only: %i[show]
 end
