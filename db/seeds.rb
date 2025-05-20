@@ -6,14 +6,13 @@ User.destroy_all
 Item.destroy_all
 
 puts 'Creating users...'
-users = 10.times.map do
-    User.create!(
-    username:              Faker::Internet.unique.username(specifier: 5..8),
-    email:                 Faker::Internet.unique.email,
-    password:              'password',
-    password_confirmation: 'password'
+user1 = User.create!(
+  username:              'username',
+  email:                 'user@username.com',
+  password:              'password',
+  password_confirmation: 'password'
   )
-end
+
 
 puts "Creating items..."
 categories = %w[t-shirts hoodies jackets shoes accessories]
@@ -29,7 +28,7 @@ items = 20.times.map do
     category:    categories.sample,
     size:        sizes.sample,
     brand:       brands.sample,
-    user:        users.sample
+    user:        user1
   )
 end
 
@@ -39,7 +38,7 @@ puts "Creating bookings..."
   end_date   = start_date + rand(1..7).days
 
   Booking.create!(
-    user:       users.sample,
+    user:       user1,
     item:       items.sample,
     start_date: start_date,
     end_date:   end_date

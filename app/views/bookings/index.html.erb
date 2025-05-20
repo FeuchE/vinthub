@@ -2,7 +2,7 @@
   <h1>All Bookings</h1>
   <ul>
     <% @bookings.each do |booking| %>
-      <li><%= booking.item.title %></li>
+      <li><%= link_to booking.item.title, booking_path(booking) %></li>
     <% end %>
   </ul>
 </div>
