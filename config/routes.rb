@@ -14,5 +14,5 @@ Rails.application.routes.draw do
     resources :bookings, only: %i[index new create]
   end
 
-  resources :bookings, only: [:show]
+  resources :bookings, only: %i[show]
 end
