@@ -3,7 +3,7 @@ class BookingsController < ApplicationController
   before_action :set_item, only: %i[new create]
 
   def index
-    @bookings = Booking.all
+    @bookings = @item.bookings
   end
 
   def show
