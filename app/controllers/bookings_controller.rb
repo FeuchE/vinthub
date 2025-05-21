@@ -16,8 +16,11 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = @item.bookings.new(booking_params)
+    
+    @booking = Booking.new(booking_params)
+    @booking.item = @item
     @booking.user = current_user
+
 
     if @booking.save
       redirect_to booking_path(@booking)
