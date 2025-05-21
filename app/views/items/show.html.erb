@@ -1,15 +1,25 @@
-<div class='container'>
+<div class="container item-details">
   <h1>Item Details</h1>
-  <ul>
-    <li>Item: <%= @item.title %></li>
-    <li>description: <%= @item.description %></li>
-    <li>Price: <%= @item.price %></li>
-  </ul>
-    <img src="<%= @item.image_url %>">
-  <ul>
-    <li>Category: <%= @item.category %></li>
-    <li>Size: <%= @item.size %></li>
-    <li>Brand: <%= @item.brand %></li>
-  </ul>
-  <%= link_to 'Back to Items', items_path, class: 'button-link' %>
+
+  <div class="item-info">
+    <div class="item-image">
+      <img src="<%= @item.image_url %>" alt="<%= @item.title %>">
+    </div>
+
+    <div class="item-data">
+      <ul>
+        <li><strong>Item:</strong> <%= @item.title %></li>
+        <li><strong>Description:</strong> <%= @item.description %></li>
+        <li><strong>Price:</strong> $<%= @item.price %></li>
+      </ul>
+
+      <ul>
+        <li><strong>Category:</strong> <%= @item.category %></li>
+        <li><strong>Size:</strong> <%= @item.size %></li>
+        <li><strong>Brand:</strong> <%= @item.brand %></li>
+      </ul>
+
+      <%= link_to 'Back to Items', items_path, class: 'button-link' %>
+    </div>
+  </div>
 </div>
