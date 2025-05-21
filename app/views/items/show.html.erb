@@ -15,7 +15,7 @@
 
   <div class='container'>
     <h3>Create a new booking</h3>
-    <%= render 'bookings/booking_form', user: @item.user, item: @item %>
+    <%= render 'bookings/booking_form', item: @item, booking: @booking %>
   </div>
   <%= link_to 'Back to Items', items_path, class: 'button-link' %>
 

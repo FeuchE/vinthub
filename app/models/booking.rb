@@ -5,11 +5,11 @@ class Booking < ApplicationRecord
   validates :start_date, presence: true
   validates :end_date, presence: true
 
-  
+
   validate :start_date_cannot_be_in_the_past
   validate :end_date_after_start_date
   validate :item_not_already_booked
-  validate :user_cannot_book_own_item
+  # validate :user_cannot_book_own_item
   validate :booking_dates_cannot_overlap
   validate :booking_dates_cannot_overlap_with_existing_bookings
 
@@ -31,11 +31,11 @@ class Booking < ApplicationRecord
     end
   end
 
-  def user_cannot_book_own_item
-    if user == item.user
-      errors.add(:base, "You cannot book your own item")
-    end
-  end
+  # def user_cannot_book_own_item
+  #   if user == item.user
+  #     errors.add(:base, "You cannot book your own item")
+  #   end
+  # end
 
   def booking_dates_cannot_overlap
     if start_date.present? && end_date.present? && start_date >= end_date
