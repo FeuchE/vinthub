@@ -1,4 +1,6 @@
 <div class='container'>
   <h1>Upload a new item</h1>
   <%= render 'item_form', item: @item %>
+  <hr>
+  <%= link_to 'Back to Items', items_path, class: 'btn btn-info' %>
 </div>
