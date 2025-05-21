@@ -6,13 +6,17 @@
     <li>Description: <%= @item.description %></li>
   </ul>
   <img src="<%= @item.image_url %>" alt="<%= @item.title %>">
+
   <ul>
     <li>Category: <%= @item.category %></li>
     <li>Size: <%= @item.size %></li>
     <li>Brand: <%= @item.brand %></li>
   </ul>
+
   <div class='container'>
     <h3>Create a new booking</h3>
     <%= render 'bookings/booking_form', user: @item.user, item: @item %>
   </div>
-</div>
+  <%= link_to 'Back to Items', items_path, class: 'button-link' %>
+
+  </div>

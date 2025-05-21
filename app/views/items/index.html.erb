@@ -1,8 +1,9 @@
 <div class='container'>
   <h1>All Items</h1>
+  <%= link_to 'Add item', new_item_path, class='btn tbn-primary' %>
   <ul>
     <% @items.each do |item| %>
-      <li><%= item.title %></li>
+      <li><%= link_to item.title, item_path(item) %></li>
     <% end %>
   </ul>
 </div>
