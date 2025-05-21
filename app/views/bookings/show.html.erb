@@ -3,10 +3,10 @@
 
   <div class="booking-card">
     <ul>
-      <li><strong>Item:</strong> <%= @booking.item.title %></li>
-      <li><strong>Price: £</strong> $<%= @booking.item.price %></li>
-      <li><strong>Start Date:</strong> <%= @booking.start_date.strftime("%B %d, %Y") %></li>
-      <li><strong>End Date:</strong> <%= @booking.end_date.strftime("%B %d, %Y") %></li>
+      <li><strong>Item: </strong> <%= @booking.item.title %></li>
+      <li><strong>Price: </strong> £<%= @booking.item.price %></li>
+      <li><strong>Start Date: </strong> <%= @booking.start_date.strftime("%B %d, %Y") %></li>
+      <li><strong>End Date: </strong> <%= @booking.end_date.strftime("%B %d, %Y") %></li>
     </ul>
 
     <%= link_to '← Back', :back, class: "btn-back" %>
