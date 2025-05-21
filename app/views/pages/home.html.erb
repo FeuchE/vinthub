@@ -1,2 +1,26 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VintHub</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="hero">
+    <div class="hero-content">
+      <h2>Borrow Timeless Style</h2>
+      <p>Discover unique vintage pieces or make offers on your favorites.</p>
+      <%= link_to "Explore Marketplace", items_path, class: "btn" %>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 VintHub. Relove the past.</p>
+    </div>
+  </footer>
+</body>
+</html>

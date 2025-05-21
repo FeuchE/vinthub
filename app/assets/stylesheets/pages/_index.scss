@@ -1,2 +1,126 @@
 // Import page-specific CSS files here.
 @import "home";
+.listings-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.listing-card {
+  display: block;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: #333;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease, background-color 0.2s ease;
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+    color: #666;
+  }
+
+  &:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.item-details {
+  h1 {
+    font-family: "Playfair Display", serif;
+    color: #4b3621;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .item-info {
+    display: flex;
+    gap: 2rem;
+    background: #fff8f0;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(75, 54, 33, 0.15);
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .item-image {
+      img {
+        max-width: 350px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(75, 54, 33, 0.2);
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .item-data {
+      max-width: 500px;
+      color: #3d2b1f;
+      font-family: "Inter", sans-serif;
+
+      ul {
+        list-style: none;
+        margin-bottom: 1.2rem;
+        padding-left: 0;
+
+        li {
+          margin-bottom: 0.6rem;
+          font-size: 1.1rem;
+
+          strong {
+            color: #7a5a2a;
+          }
+        }
+      }
+
+      .button-link {
+        display: inline-block;
+        background-color: #ffd5a5;
+        color: #3d2b1f;
+        padding: 0.6rem 1.3rem;
+        border-radius: 25px;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+        text-align: center;
+
+        &:hover {
+          background-color: #ffbb7b;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .item-info {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .item-data {
+      max-width: 100%;
+    }
+  }
+}

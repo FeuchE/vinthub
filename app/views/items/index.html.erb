@@ -1,9 +1,13 @@
-<div class='container'>
-  <h1>All Items</h1>
+<div class="listings-container">
+  <h1>All Listings</h1>
   <%= link_to 'Add item', new_item_path, class:'btn btn-primary' %>
-  <ul>
+  <hr>
+  <div class="listings-grid">
     <% @items.each do |item| %>
-      <li><%= link_to item.title, item_path(item) %></li>
+      <%= link_to item_path(item), class: "listing-card" do %>
+        <h2><%= item.title %></h2>
+        <p><%= truncate(item.description, length: 80) %></p>
+      <% end %>
     <% end %>
-  </ul>
+  </div>
 </div>

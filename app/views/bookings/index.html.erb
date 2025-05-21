@@ -1,8 +1,16 @@
-<div class='container'>
+<div class="container bookings-page">
   <h1>All Bookings</h1>
-  <ul>
-    <% @bookings.each do |booking| %>
-      <li><%= link_to booking.item.title, booking_path(booking) %></li>
-    <% end %>
-  </ul>
+
+  <% if @bookings.any? %>
+    <ul class="booking-list">
+      <% @bookings.each do |booking| %>
+        <li>
+          <%= link_to booking.item.title, booking_path(booking), class: "booking-link" %>
+          <span class="booking-date">— Booked on <%= booking.created_at.strftime("%B %d, %Y") %></span>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p class="no-bookings">You haven't made any bookings yet.</p>
+  <% end %>
 </div>
