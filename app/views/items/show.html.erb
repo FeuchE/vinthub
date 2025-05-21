@@ -12,11 +12,12 @@
     <li>Size: <%= @item.size %></li>
     <li>Brand: <%= @item.brand %></li>
   </ul>
-
+  <hr>
   <div class='container'>
     <h3>Create a new booking</h3>
     <%= render 'bookings/booking_form', item: @item, booking: @booking %>
   </div>
-  <%= link_to 'Back to Items', items_path, class: 'button-link' %>
+  <hr>
+  <%= link_to 'Back to Items', items_path, class: 'btn btn-info' %>
 
   </div>
