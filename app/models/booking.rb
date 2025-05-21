@@ -12,6 +12,15 @@ class Booking < ApplicationRecord
   # validate :user_cannot_book_own_item
   validate :booking_dates_cannot_overlap
   validate :booking_dates_cannot_overlap_with_existing_bookings
+  validate :total_price
+  validate :duration
+  validate :formatted_start_date
+  validate :formatted_end_date
+  validate :formatted_duration
+  # validate :formatted_total_price
+  validate :formatted_booking_dates
+  validate :formatted_booking_duration
+  # validate :formatted_booking_total_price
 
   def start_date_cannot_be_in_the_past
     if start_date.present? && start_date < Date.today
@@ -51,7 +60,7 @@ class Booking < ApplicationRecord
 
   def total_price
     if start_date.present? && end_date.present?
-      (end_date - start_date).to_i * item.price_per_day
+      (end_date - start_date).to_i * item.price
     else
       0
     end
@@ -104,6 +113,4 @@ class Booking < ApplicationRecord
       "N/A"
     end
   end
-
-
 end
