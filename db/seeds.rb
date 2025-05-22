@@ -1,3 +1,5 @@
+
+
 require 'faker'
 
 puts 'Cleaning database...'
@@ -11,26 +13,83 @@ user1 = User.create!(
   email:                 'user@username.com',
   password:              'password',
   password_confirmation: 'password'
-  )
+)
 
+puts 'Creating items...'
 
-puts "Creating items..."
-categories = %w[t-shirts hoodies jackets shoes accessories]
-sizes      = %w[S M L]
-brands     = %w[Asket Acne Carhart]
+sizes = ["XS", "S", "M", "L", "XL"]
+brands = ["RetroVibe", "ClassicWear", "VintageFinds", "OldSchool", "TimelessThreads"]
+vintage_styles = ["50s", "60s", "70s", "80s", "90s", "Retro", "Rockabilly", "Mod", "Boho", "Disco", "Classic"]
 
-items = 20.times.map do
+items_data = [
+  # ... [same 50 items as before] ...
+  { name: "Polka Dot Swing Dress", category: "Dresses" },
+  { name: "Cherry Print Halter Dress", category: "Dresses" },
+  { name: "Floral Tea Dress", category: "Dresses" },
+  { name: "Plaid Shirt Dress", category: "Dresses" },
+  { name: "Cap Sleeve Wiggle Dress", category: "Dresses" },
+  { name: "Tie-Front Blouse", category: "Tops" },
+  { name: "Cap Sleeve Knit Top", category: "Tops" },
+  { name: "Off-Shoulder Bardot Top", category: "Tops" },
+  { name: "Sleeveless Button-Up Blouse", category: "Tops" },
+  { name: "Striped Crop Top", category: "Tops" },
+  { name: "Pencil Skirt", category: "Skirts" },
+  { name: "Circle Skirt", category: "Skirts" },
+  { name: "Tartan Mini Skirt", category: "Skirts" },
+  { name: "Pleated Swing Skirt", category: "Skirts" },
+  { name: "Button-Front Cord Skirt", category: "Skirts" },
+  { name: "High-Waisted Cuffed Jeans", category: "Jeans" },
+  { name: "Wide-Leg Button Jeans", category: "Jeans" },
+  { name: "Checked Slacks", category: "Bottoms" },
+  { name: "Sailor Button Pants", category: "Bottoms" },
+  { name: "Retro Pedal Pushers", category: "Bottoms" },
+  { name: "Leather Moto Jacket", category: "Jackets" },
+  { name: "Fringe Suede Jacket", category: "Jackets" },
+  { name: "Bolero Shrug", category: "Jackets" },
+  { name: "Cropped Denim Jacket", category: "Jackets" },
+  { name: "Faux Fur Collar Coat", category: "Jackets" },
+  { name: "Creepers", category: "Shoes" },
+  { name: "Peep-Toe Pumps", category: "Shoes" },
+  { name: "Saddle Shoes", category: "Shoes" },
+  { name: "T-Strap Heels", category: "Shoes" },
+  { name: "Platform Mary Janes", category: "Shoes" },
+  { name: "Cat-Eye Glasses", category: "Glasses" },
+  { name: "Retro Clear Lenses", category: "Glasses" },
+  { name: "Aviator Sunglasses", category: "Glasses" },
+  { name: "Round Wire Glasses", category: "Glasses" },
+  { name: "Tinted Oversized Glasses", category: "Glasses" },
+  { name: "Pillbox Hat", category: "Hats" },
+  { name: "Leopard Print Beret", category: "Hats" },
+  { name: "Feather Fascinator", category: "Hats" },
+  { name: "Classic Fedora", category: "Hats" },
+  { name: "Velvet Cloche Hat", category: "Hats" },
+  { name: "Vintage Brooch", category: "Accessories" },
+  { name: "Pearl Choker Necklace", category: "Accessories" },
+  { name: "Polka Dot Headscarf", category: "Accessories" },
+  { name: "Lace Gloves", category: "Accessories" },
+  { name: "Bakelite Bangle Set", category: "Accessories" },
+  { name: "Embroidered Cardigan", category: "Tops" },
+  { name: "Bow Back Wiggle Dress", category: "Dresses" },
+  { name: "Retro Bowling Shirt", category: "Tops" },
+  { name: "Rockabilly Bandana", category: "Accessories" },
+  { name: "Swing Coat", category: "Jackets" }
+]
+
+items = items_data.map do |data|
+  style = vintage_styles.sample
   Item.create!(
-    title:       Faker::Commerce.product_name,
-    description: Faker::Lorem.paragraph(sentence_count: 2),
-    image_url:   Faker::LoremFlickr.image(size: "300x300", search_terms: ['product']),
-    price:       Faker::Commerce.price(range: 5.0..500.0),
-    category:    categories.sample,
+    title:       "#{style} #{data[:name]}",
+    description: "#{style}-inspired #{data[:name]} perfect for vintage lovers.",
+    image_url:   "https://source.unsplash.com/300x300/?vintage,#{data[:category].downcase},#{rand(1000)}",
+    price:       Faker::Commerce.price(range: 10.0..50.0),
+    category:    data[:category],
     size:        sizes.sample,
     brand:       brands.sample,
     user:        user1
   )
 end
+
+puts "Created #{items.count} items."
 
 puts "Creating bookings..."
 10.times do
