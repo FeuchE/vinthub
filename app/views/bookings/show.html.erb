@@ -1,9 +1,21 @@
-<div class='container'>
+<div class="container booking-details">
   <h1>Booking Details</h1>
-  <ul>
-    <li><%= @booking.item.title %></li>
-    <li><%= @booking.item.price %></li>
-    <li><%= @booking.start_date %></li>
-    <li><%= @booking.end_date %></li>
-  </ul>
+
+  <div class="booking-card">
+    <ul>
+      <li><strong>Item: </strong> <%= @booking.item.title %></li>
+      <li><strong>Total price for booking: </strong> £<%= @booking.item.price * (@booking.end_date - @booking.start_date).to_i %></li>
+      <li><strong>Start Date: </strong> <%= @booking.start_date.strftime("%B %d, %Y") %></li>
+      <li><strong>End Date: </strong> <%= @booking.end_date.strftime("%B %d, %Y") %></li>
+      <li><strong>Duration: </strong> <%= (@booking.end_date - @booking.start_date).to_i %> days</li>
+    </ul>
+    <div class='delete-link'>
+      <%= link_to booking_path(@booking), data: { turbo_method: :delete, confirm: "Are you sure?" }, class: "btn btn-link p-0 m-0 align-baseline" do %>
+        <i class="fa-solid fa-trash"></i>
+      <% end %>
+    </div>
+
+    <%= link_to '← Back', :back, class: "btn-back" %>
+  </div>
+
 </div>

@@ -1,9 +1,10 @@
 class BookingsController < ApplicationController
-  before_action :set_user, only: %i[new create]
+  before_action :authenticate_user!
+  before_action :set_booking, only: %i[show destroy]
   before_action :set_item, only: %i[new create]
 
   def index
-    @bookings = @item.bookings
+    @bookings = current_user.bookings
   end
 
   def show
@@ -11,29 +12,34 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @booking = Booking.new
+    @booking = @item.bookings.new
   end
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.user = current_user
     @booking.item = @item
+    @booking.user = current_user
 
-    if @booking.save
+    if @booking.save!
       redirect_to booking_path(@booking)
     else
       render :new, status: :unprocessable_entity
     end
   end
 
-  private
-
-  def set_user
-    @user = User.find(params[:user_id])
+  def destroy
+    @booking.destroy
+    redirect_to bookings_path, notice: 'Booking was successfully destroyed.'
   end
+
+  private
 
   def set_item
     @item = Item.find(params[:item_id])
+  end
+
+  def set_booking
+    @booking = current_user.bookings.find(params[:id])
   end
 
   def booking_params
