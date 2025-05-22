@@ -1,0 +1,12 @@
+<div class='card-wrapper'>
+  <div class='index-booking-card'>
+    <%= link_to booking.item.title, booking_path(booking), class: "booking-link" %>
+    <span class="booking-date">— Booked on <%= booking.created_at.strftime("%B %d, %Y") %></span>
+    <div class='delete-link'>
+      <%= link_to booking_path(booking), data: { turbo_method: :delete, confirm: "Are you sure?" }, class: "btn btn-link p-0 m-0 align-baseline" do %>
+        <i class="fa-solid fa-trash"></i>
+      <% end %>
+    </div>
+  </div>
+
+</div>
