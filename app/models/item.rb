@@ -10,4 +10,17 @@ class Item < ApplicationRecord
   validates :size, presence: true
   validates :brand, presence: true
   validates :user_id, presence: true
+
+  include PgSearch::Model
+  pg_search_scope :search_by_title_and_description_and_category_and_brand_and_size,
+    against: [
+      :title,
+      :description,
+      :category,
+      :brand,
+      :size
+    ],
+    using: {
+      tsearch: { prefix: true }
+    }
 end
