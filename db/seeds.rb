@@ -74,19 +74,28 @@ items_data = [
   { name: "Rockabilly Bandana", category: "Accessories" },
   { name: "Swing Coat", category: "Jackets" }
 ]
+absolute_path = File.join("app/assets/images/seed_file/41UG52cb49L._SL500_.jpg")
+image_file_directory = File.dirname(absolute_path)
+image_files = Dir.children(image_file_directory)
+p image_files
+counter = 0
 
+  p file
 items = items_data.map do |data|
   style = vintage_styles.sample
-  Item.create!(
+  item = Item.new(
     title:       "#{style} #{data[:name]}",
     description: "#{style}-inspired #{data[:name]} perfect for vintage lovers.",
-    image_url:   "https://source.unsplash.com/300x300/?vintage,#{data[:category].downcase},#{rand(1000)}",
+    #image_url:   "https://source.unsplash.com/300x300/?vintage,#{data[:category].downcase},#{rand(1000)}",
     price:       Faker::Commerce.price(range: 10.0..50.0),
     category:    data[:category],
     size:        sizes.sample,
     brand:       brands.sample,
     user:        user1
   )
+  file = File.open(File.join(image_file_directory, image_files[counter]))
+  item.photo.attach(io: file, filename: image_files[counter], content_type: "image/#{File.extname(file)}")
+  counter += 1
 end
 
 puts "Created #{items.count} items."
