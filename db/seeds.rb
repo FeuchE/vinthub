@@ -78,10 +78,13 @@ absolute_path = File.join("app/assets/images/seed_file/41UG52cb49L._SL500_.jpg")
 image_file_directory = File.dirname(absolute_path)
 image_files = Dir.children(image_file_directory)
 p image_files
-counter = 0
 
-  p file
-items = items_data.map do |data|
+image_files = image_files.select do |file|
+  File.extname(file) == ".jpg"
+end
+p image_files.count
+counter = 0
+  items = items_data.map do |data|
   style = vintage_styles.sample
   item = Item.new(
     title:       "#{style} #{data[:name]}",
@@ -94,7 +97,9 @@ items = items_data.map do |data|
     user:        user1
   )
   file = File.open(File.join(image_file_directory, image_files[counter]))
-  item.photo.attach(io: file, filename: image_files[counter], content_type: "image/#{File.extname(file)}")
+  item.photo.attach(io: file, filename: image_files[counter], content_type: "image/jpg")
+  item.save!
+  puts "item created!"
   counter += 1
 end
 
