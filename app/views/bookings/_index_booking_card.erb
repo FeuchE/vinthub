@@ -1,7 +1,12 @@
 <div class='card-wrapper'>
-  <div class='index-booking-card'>
-    <%= link_to booking.item.title, booking_path(booking), class: "booking-link" %>
-    <span class="booking-date">— Booked on <%= booking.created_at.strftime("%B %d, %Y") %></span>
+  <div class='index-booking-card d-flex'>
+    <div class='booking-image' style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path photo, height: 300, crop: :fill %>')">
+    </div>
+    <div class='index-booking-text'>
+      <%= link_to title, booking_path(booking), class: "booking-link" %>
+      <br>
+      <span class="booking-date">— Booked on <%= timestamp %></span>
+    </div>
     <div class='delete-link'>
       <%= link_to booking_path(booking), data: { turbo_method: :delete, confirm: "Are you sure?" }, class: "btn btn-link p-0 m-0 align-baseline" do %>
         <i class="fa-solid fa-trash"></i>

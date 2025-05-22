@@ -1,0 +1,67 @@
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.index-booking-card {
+  background: #fff8f0;
+  margin-bottom: 1rem;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(75, 54, 33, 0.1);
+  font-family: "Inter", sans-serif;
+  width: 700px;
+  height:200px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .booking-image {
+    border-radius: 0.5rem;
+    height: 100%;
+    width:45%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+  }
+
+  .index-booking-text {
+    padding-left: 20px;
+
+    .booking-link {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #3d2b1f;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .booking-date {
+      display: block;
+      font-size: 0.9rem;
+      color: #7a5a2a;
+      margin-top: 0.3rem;
+    }
+  }
+  .delete-link {
+    padding: 120px 45px 44px 10px;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    margin-left: auto;
+
+    i {
+      color: $gray;
+    }
+    &:hover {
+      color: $red;
+    }
+
+  }
+}
