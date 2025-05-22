@@ -1,5 +1,26 @@
 <div class='card-wrapper'>
-  <div class= 'show-item-card'>
+  <div class="item-info">
+    <div class="item-image">
 
+    </div>
+
+    <div class="item-data">
+      <ul>
+        <li><strong>Item:</strong> <%= title %></li>
+        <li><strong>Description:</strong> <%= description %></li>
+        <li><strong>Price per day: </strong> £<%= price %></li>
+      </ul>
+
+      <ul>
+        <li><strong>Category:</strong> <%= category %></li>
+        <li><strong>Size:</strong> <%= size %></li>
+        <li><strong>Brand:</strong> <%= brand %></li>
+      </ul>
+    </div>
+      <hr>
+      <div class='new-booking-container'>
+        <h3>Create a new booking</h3>
+        <%= render 'bookings/booking_form', item: item, booking: booking %>
+      </div>
   </div>
 </div>
