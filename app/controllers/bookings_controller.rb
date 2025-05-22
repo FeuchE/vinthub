@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_booking, only: %i[show]
+  before_action :set_booking, only: %i[show destroy]
   before_action :set_item, only: %i[new create]
 
   def index
@@ -25,6 +25,11 @@ class BookingsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @booking.destroy
+    redirect_to bookings_path, notice: 'Booking was successfully destroyed.'
   end
 
   private

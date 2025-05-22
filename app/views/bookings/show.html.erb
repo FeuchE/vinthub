@@ -9,6 +9,11 @@
       <li><strong>End Date: </strong> <%= @booking.end_date.strftime("%B %d, %Y") %></li>
       <li><strong>Duration: </strong> <%= (@booking.end_date - @booking.start_date).to_i %> days</li>
     </ul>
+    <div class='delete-link'>
+      <%= link_to booking_path(@booking), data: { turbo_method: :delete, confirm: "Are you sure?" }, class: "btn btn-link p-0 m-0 align-baseline" do %>
+        <i class="fa-solid fa-trash"></i>
+      <% end %>
+    </div>
 
     <%= link_to '← Back', :back, class: "btn-back" %>
   </div>
