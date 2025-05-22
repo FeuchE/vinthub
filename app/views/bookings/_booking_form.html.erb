@@ -1,15 +1,16 @@
 <div class='booking-form-container'>
-  <%= simple_form_for [item, booking] do |form| %>
+  <%= simple_form_for [item, booking] do |f| %>
     <div class="field">
-      <%= form.label :start_date %>
-      <%= form.date_select :start_date %>
+      <%= f.input :start_date,
+            as: :string,
+            input_html: { data: { controller: "datepicker" } } %>
+    </div>
+    <div class="field">
+      <%= f.input :end_date,
+            as: :string,
+            input_html: { data: { controller: "datepicker" } } %>
     </div>
 
-    <div class="field">
-      <%= form.label :end_date %>
-      <%= form.date_select :end_date %>
-    </div>
-
-    <%= form.submit %>
+    <%= f.button :submit, class: 'btn btn-primary' %>
   <% end %>
 </div>
