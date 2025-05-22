@@ -18,8 +18,11 @@
   <div class="listings-grid">
     <% @items.each do |item| %>
       <%= link_to item_path(item), class: "listing-card" do %>
-        <h2><%= item.title %></h2>
-        <p><%= truncate(item.description, length: 80) %></p>
+        <%= render 'index_item_card',
+          photo: item.photo.key,
+          title: item.title,
+          description: item.description
+        %>
       <% end %>
     <% end %>
   </div>
