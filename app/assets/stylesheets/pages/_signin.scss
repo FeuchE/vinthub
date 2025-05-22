@@ -1,0 +1,61 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 400px;
+  height: 70vh;
+  padding: 20px;
+
+  .form-actions{
+    input{
+      width: 100%;
+      background-color: #133bab;
+      color: white;
+      transition: all 0.3s ease;
+      &:hover{
+        background-color: #0f2a6e;
+      }
+    }
+  }
+
+  .shared-links{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    br{
+      display: none;
+    }
+    .signup-link{
+      text-decoration: none;
+      transition: all 0.3s ease;
+      &:hover{
+        color: #1d4abd;
+      }
+    }
+    .forgot-password-link{
+      text-decoration: none;
+      transition: all 0.3s ease;
+      &:hover{
+        color: #1d4abd;
+      }
+    }
+    .login-link{
+      text-decoration: none;
+      transition: all 0.3s ease;
+      &:hover{
+        color: #1d4abd;
+      }
+    }
+  }
+
+  .new-user{
+    margin-bottom: 2rem;
+  }
+}
+
+.alert{
+  margin: 5rem;
+  color: #ff8371;
+  font-size: 1.2rem;
+}
