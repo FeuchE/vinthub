@@ -1,12 +1,44 @@
-.navbar-lewagon {
+.navbar{
+  max-height: 5vh;
+  .nav-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 0 1.5rem;
+  }
+}
+.navbar-nav{
+  display: flex;
   justify-content: space-between;
-  background: white;
+  align-items: center;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+
+.log-in-btn, .log-out-btn {
+  color: white;
+  font-size: .8em;
+  margin-left: 2rem;
+  transition: all 0.3s ease;
+
+}
+.log-in-btn{
+  background-color: $softcta;
+  &:hover {
+    background-color: #9997a9;
+    color: white;
+  }
+}
+.log-out-btn{
+  background-color: #ff8371;
+  &:hover {
+    background-color:#ffac9f ;
+    color: white;
+  }
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-brand{
+  color: #2f4858;
+  font-weight: bold;
+  font-size: 2em;
 }
