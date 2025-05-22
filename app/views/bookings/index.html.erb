@@ -2,8 +2,9 @@
   <h1>All Bookings</h1>
 
   <% if @bookings.any? %>
-    <ul class="booking-list">
+    <div class="booking-list">
       <% @bookings.each do |booking| %>
+
         <li>
           <%= link_to booking.item.title, booking_path(booking), class: "booking-link" %>
           <span class="booking-date">— Booked on <%= booking.created_at.strftime("%B %d, %Y") %></span>
@@ -13,8 +14,9 @@
             <% end %>
           </div>
         </li>
+
       <% end %>
-    </ul>
+    </div>
   <% else %>
     <p class="no-bookings">You haven't made any bookings yet.</p>
   <% end %>
