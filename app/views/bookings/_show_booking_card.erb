@@ -8,7 +8,7 @@
       <li><strong>Duration: </strong> <%= (end_date - start_date).to_i %> days</li>
     </ul>
     <div class="item-image">
-      <%= cl_image_tag photo, height: 300, width: 400, crop: :fill %>
+      <%= cl_image_tag photo, height: 300, width: 400, crop: :fill, alt: "Image of #{title}" %>
     </div>
     <div class='delete-link'>
       <% if policy(booking).destroy? %>
