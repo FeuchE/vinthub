@@ -7,17 +7,23 @@
   color: #333;
   text-decoration: none;
   transition: box-shadow 0.2s ease, background-color 0.2s ease;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+
 
   .index-item-text {
       h2 {
       font-size: 1rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
+      color: white
     }
 
     p {
       font-size: 0.875rem;
-      color: #666;
+      color: white;
     }
   }
 
