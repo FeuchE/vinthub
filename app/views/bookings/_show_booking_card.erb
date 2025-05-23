@@ -11,8 +11,10 @@
       <%= cl_image_tag photo, height: 300, width: 400, crop: :fill, alt: "Image of #{title}" %>
     </div>
     <div class='delete-link'>
-      <%= link_to booking_path(booking), data: { turbo_method: :delete, confirm: "Are you sure?" }, class: "btn btn-link p-0 m-0 align-baseline" do %>
-        <i class="fa-solid fa-trash"></i>
+      <% if policy(booking).destroy? %>
+        <%= link_to booking_path(booking), data: { turbo_method: :delete, confirm: "Are you sure?" }, class: "btn btn-link p-0 m-0 align-baseline" do %>
+          <i class="fa-solid fa-trash"></i>
+        <% end %>
       <% end %>
     </div>
   </div>
