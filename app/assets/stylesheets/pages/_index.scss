@@ -6,12 +6,15 @@
   padding: 1rem;
 
   h1 {
-    font-size: 1.5rem;
+    font-family: "Great Vibes", cursive; // vintage cursive font
+    font-size: 3rem; // bigger font size
     font-weight: bold;
     margin-bottom: 1.5rem;
+    padding: 20px 0; // 20px padding top & bottom
+    text-align: center; // center horizontally
+    color: #4a3c31; // optional vintage brown tone
   }
 }
-
 .listings-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));

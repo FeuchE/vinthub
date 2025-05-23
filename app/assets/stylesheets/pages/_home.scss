@@ -31,7 +31,15 @@ a {
 }
 
 /* Typography */
-h1,
+h1 {
+  font-family: "Great Vibes", cursive; // Vintage cursive for h1
+  font-size: 5rem; // doubled from 3rem
+  color: #4a3c31;
+  font-weight: bold;
+  padding: 20px 0;
+  text-align: center;
+}
+
 h2 {
   font-family: $font-heading;
 }

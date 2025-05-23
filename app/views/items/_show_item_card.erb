@@ -1,12 +1,12 @@
 <div class='card-wrapper'>
   <div class="item-info">
     <div class="item-image">
-      <%= cl_image_tag photo, height: 300, width: 400, crop: :fill, alt: title %>
+      <%= cl_image_tag photo, height: 500, width: 350, crop: :fill, alt: title %>
     </div>
 
     <div class="item-data">
+      <h3><strong>Item :</strong> <%= title %></h3>
       <ul>
-        <li><strong>Item:</strong> <%= title %></li>
         <li><strong>Description:</strong> <%= description %></li>
         <li><strong>Price per day: </strong> £<%= price %></li>
       </ul>
