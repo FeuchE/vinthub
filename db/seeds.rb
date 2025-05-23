@@ -73,7 +73,11 @@ items_data = [
   { name: "Retro Bowling Shirt", category: "Tops" },
   { name: "Rockabilly Bandana", category: "Accessories" },
   { name: "Swing Coat", category: "Jackets" }
-]
+].sort_by { |item| item[:name] }
+
+
+
+
 absolute_path = File.join("app/assets/images/seed_file/41UG52cb49L._SL500_.jpg")
 image_file_directory = File.dirname(absolute_path)
 image_files = Dir.children(image_file_directory)
@@ -81,7 +85,8 @@ p image_files
 
 image_files = image_files.select do |file|
   File.extname(file) == ".jpg"
-end
+end.sort
+
 p image_files.count
 counter = 0
   items = items_data.map do |data|
@@ -96,6 +101,8 @@ counter = 0
     brand:       brands.sample,
     user:        user1
   )
+  p image_files[counter]
+  p data
   file = File.open(File.join(image_file_directory, image_files[counter]))
   item.photo.attach(io: file, filename: image_files[counter], content_type: "image/jpg")
   item.save!
