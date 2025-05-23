@@ -4,16 +4,6 @@
   max-width: 960px;
   margin: 0 auto;
   padding: 1rem;
-
-  h1 {
-    font-family: "Great Vibes", cursive; // vintage cursive font
-    font-size: 3rem; // bigger font size
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-    padding: 20px 0; // 20px padding top & bottom
-    text-align: center; // center horizontally
-    color: #4a3c31; // optional vintage brown tone
-  }
 }
 .listings-grid {
   display: grid;
@@ -50,11 +40,13 @@
 
 .item-details {
   h1 {
-    font-family: "Playfair Display", serif;
-    color: #4b3621;
+    font-family: "Great Vibes", cursive; // vintage cursive font
+    font-size: 3rem; // bigger font size
+    font-weight: bold;
     margin-bottom: 1.5rem;
-    font-size: 2.5rem;
-    text-align: center;
+    padding: 20px 0; // 20px padding top & bottom
+    text-align: center; // center horizontally
+    color: #4a3c31; // optional vintage brown tone
   }
 
   .item-info {

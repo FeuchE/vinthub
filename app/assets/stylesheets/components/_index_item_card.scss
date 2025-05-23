@@ -1,4 +1,4 @@
-.index-item-card{
+.index-item-card {
   display: block;
   padding: 1rem;
   border: 1px solid #ddd;
@@ -12,13 +12,12 @@
   background-repeat: no-repeat;
   height: 300px;
 
-
   .index-item-text {
-      h2 {
-      font-size: 1rem;
+    h2 {
+      font-size: 1.5rem; // Increased from 1rem
       font-weight: 600;
       margin-bottom: 0.5rem;
-      color: white
+      color: white;
     }
 
     p {
