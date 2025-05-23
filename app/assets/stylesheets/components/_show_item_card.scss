@@ -17,3 +17,21 @@
     width: 100%;
   }
 }
+
+.delete-link {
+    padding: 0px 0px 10px 50px;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    i {
+      color: $gray;
+
+      &:hover {
+        color: $red;
+      }
+    }
+  }

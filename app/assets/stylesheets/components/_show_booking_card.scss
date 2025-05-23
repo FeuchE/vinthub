@@ -32,9 +32,10 @@
 
     i {
       color: $gray;
-    }
-    &:hover {
-      color: $red;
+
+      &:hover {
+        color: $red;
+      }
     }
 
   }
