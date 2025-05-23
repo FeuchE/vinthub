@@ -1,0 +1,186 @@
+//@import "config/variables";
+
+// .item-details {
+//   max-width: 900px;
+//   margin: 4rem auto;
+//   padding: 0 1rem;
+
+//   h1 {
+//     font-family: $font-heading;
+//     font-weight: 400;
+//     font-size: 2.75rem;
+//     color: $color-text;
+//     text-align: center;
+//     margin-bottom: 2rem;
+//     letter-spacing: 0.03em;
+//   }
+
+//   .item-info {
+//     display: flex;
+//     gap: 3rem;
+//     background: $color-card-bg;
+//     padding: 2rem;
+//     border-radius: $border-radius;
+//     box-shadow: 0 8px 20px rgba(75, 54, 33, 0.1);
+//     flex-wrap: wrap;
+//     justify-content: center;
+
+//     .item-image {
+//       flex: 1 1 350px;
+
+//       img {
+//         width: 100%;
+//         border-radius: $border-radius;
+//         box-shadow: 0 6px 15px rgba(75, 54, 33, 0.15);
+//         object-fit: cover;
+//       }
+//     }
+
+//     .item-data {
+//       flex: 1 1 400px;
+//       font-family: $font-main;
+//       color: $color-text;
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: center;
+
+//       ul {
+//         list-style: none;
+//         padding: 0;
+//         margin-bottom: 1.5rem;
+
+//         li {
+//           font-size: 1.1rem;
+//           margin-bottom: 0.7rem;
+//           color: $color-muted;
+
+//           strong {
+//             color: $color-accent;
+//           }
+//         }
+//       }
+
+//       .button-link {
+//         align-self: flex-start;
+//         padding: 0.75rem 2rem;
+//         border-radius: 50px;
+//         background-color: $color-accent;
+//         color: $color-card-bg;
+//         font-weight: 600;
+//         font-size: 1rem;
+//         letter-spacing: 0.1em;
+//         transition: background-color $transition-speed ease;
+//         cursor: pointer;
+//         border: none;
+//         box-shadow: 0 4px 10px rgba(163, 127, 64, 0.35);
+//         text-align: center;
+//         text-decoration: none;
+
+//         &:hover {
+//           background-color: $color-accent-hover;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// @media (max-width: 768px) {
+//   .item-info {
+//     flex-direction: column;
+//     align-items: center;
+//   }
+
+//   .item-data {
+//     width: 100%;
+//   }
+// }
+
+/* ===== Item Details Page ===== */
+.item-details {
+  h1 {
+    font-family: "Great Vibes", cursive;
+    color: #4b3621;
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .cursive-title {
+    font-family: "Great Vibes", cursive;
+    font-size: 3rem;
+    color: #4a3c31;
+    font-weight: bold;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .item-info {
+    display: flex;
+    gap: 2rem;
+    background: #fff8f0;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(75, 54, 33, 0.15);
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .item-image {
+      img {
+        max-width: 350px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(75, 54, 33, 0.2);
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .item-data {
+      max-width: 500px;
+      color: $color-text;
+      font-family: $font-main;
+
+      ul {
+        list-style: none;
+        margin-bottom: 1.2rem;
+        padding-left: 0;
+
+        li {
+          margin-bottom: 0.6rem;
+          font-size: 1.1rem;
+
+          strong {
+            color: #7a5a2a;
+          }
+        }
+      }
+
+      .button-link {
+        display: inline-block;
+        background-color: $color-accent;
+        color: $color-text;
+        padding: 0.6rem 1.3rem;
+        border-radius: 25px;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+        text-align: center;
+
+        &:hover {
+          background-color: $color-accent-hover;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .item-info {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .item-data {
+      max-width: 100%;
+    }
+  }
+}

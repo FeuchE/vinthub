@@ -1,16 +1,18 @@
 .booking-details {
   h1 {
-    font-family: "Playfair Display", serif;
-    font-size: 2.2rem;
-    color: #4b3621;
+    font-family: "Great Vibes", cursive; // vintage cursive font
+    font-size: 3rem; // bigger font size
+    font-weight: bold;
     margin-bottom: 1.5rem;
-    text-align: center;
+    padding: 20px 0; // 20px padding top & bottom
+    text-align: center; // center horizontally
+    color: #4a3c31;
   }
 
   .booking-card {
     background: #fff8f0;
     border-radius: 12px;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 2rem; // same padding as .item-info
     box-shadow: 0 4px 8px rgba(75, 54, 33, 0.1);
     max-width: 600px;
     margin: 0 auto;
@@ -18,10 +20,11 @@
     ul {
       list-style: none;
       padding-left: 0;
+      margin-bottom: 1.2rem;
 
       li {
         font-size: 1.1rem;
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.6rem;
         color: #3d2b1f;
 
         strong {
@@ -51,11 +54,13 @@
 
 .bookings-page {
   h1 {
-    font-family: "Playfair Display", serif;
-    color: #4b3621;
-    font-size: 2.2rem;
+    font-family: "Great Vibes", cursive; // vintage cursive font
+    font-size: 3rem; // bigger font size
+    font-weight: bold;
     margin-bottom: 1.5rem;
-    text-align: center;
+    padding: 20px 0; // 20px padding top & bottom
+    text-align: center; // center horizontally
+    color: #4a3c31;
   }
 
   .booking-list {
