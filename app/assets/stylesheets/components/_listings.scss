@@ -1,0 +1,107 @@
+// @import "config/variables";
+
+// .listings-container {
+//   max-width: 960px;
+//   margin: 3rem auto;
+//   padding: 0 1rem;
+
+//   h1 {
+//     font-family: $font-heading;
+//     font-weight: 400;
+//     font-size: 2rem;
+//     margin-bottom: 2rem;
+//     color: $color-text;
+//     letter-spacing: 0.03em;
+//   }
+// }
+
+// .listings-grid {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+//   gap: 2rem;
+// }
+
+// .listing-card {
+//   background-color: $color-card-bg;
+//   border: 1px solid $color-border;
+//   border-radius: $border-radius;
+//   box-shadow: 0 2px 4px $color-shadow;
+//   padding: 1.5rem;
+//   color: $color-text;
+//   transition: box-shadow $transition-speed ease,
+//     transform $transition-speed ease;
+//   text-decoration: none;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 0.75rem;
+
+//   &:hover {
+//     box-shadow: 0 6px 20px rgba(75, 54, 33, 0.15);
+//     transform: translateY(-5px);
+//   }
+
+//   img {
+//     border-radius: 10px;
+//     object-fit: cover;
+//     width: 100%;
+//     aspect-ratio: 4 / 5;
+//   }
+
+//   h2 {
+//     font-family: $font-heading;
+//     font-weight: 400;
+//     font-size: 1.125rem;
+//     color: $color-text;
+//   }
+
+//   p {
+//     font-size: 0.95rem;
+//     color: $color-muted;
+//   }
+// }
+
+/* ===== Listings ===== */
+.listings-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.listing-card {
+  display: block;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: #333;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease, background-color 0.2s ease;
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+    color: #666;
+  }
+
+  &:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+}

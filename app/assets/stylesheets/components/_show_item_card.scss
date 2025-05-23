@@ -17,6 +17,30 @@
     width: 100%;
   }
 }
+
 .button-link{
   padding: 1rem 0;
 }
+
+h3{
+  color: #57432f;
+}
+
+.delete-link {
+    padding: 0px 0px 10px 50px;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    i {
+      color: $gray;
+
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+

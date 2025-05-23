@@ -13,19 +13,29 @@
   box-shadow: 0 3px 6px rgba(75, 54, 33, 0.1);
   font-family: "Inter", sans-serif;
   width: 700px;
-  height:200px;
+  height: 200px;
   overflow: hidden;
   display: flex;
   flex-direction: row;
   align-items: center;
 
+  // .booking-image {
+  //   border-radius: 0.5rem;
+  //   height: 100%;
+  //   width:45%;
+  //   background-size: cover;
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   flex-shrink: 0;
+  // }
+
   .booking-image {
     border-radius: 0.5rem;
-    height: 100%;
-    width:45%;
-    background-size: cover;
+    width: 350px;
+    height: 350px;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: contain; // ensures full image is visible
     flex-shrink: 0;
   }
 
@@ -58,10 +68,10 @@
 
     i {
       color: $gray;
-    }
-    &:hover {
-      color: $red;
-    }
 
+      &:hover {
+        color: $red;
+      }
+    }
   }
 }

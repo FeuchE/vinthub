@@ -1,44 +1,55 @@
-.navbar{
+.navbar {
   max-height: 5vh;
-  .nav-container{
+  background-color: #f8f9fa; // Optional: subtle background
+
+  .nav-container {
     display: flex;
     justify-content: space-between;
-    width: 100%;
     align-items: center;
     padding: 0 1.5rem;
+    width: 100%;
   }
 }
-.navbar-nav{
+
+.navbar-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-
-.log-in-btn, .log-out-btn {
+.log-in-btn,
+.log-out-btn {
   color: white;
-  font-size: .8em;
+  font-size: 0.8em;
   margin-left: 2rem;
+  padding: 0.4rem 1rem;
+  border: none;
+  border-radius: 4px;
   transition: all 0.3s ease;
-
+  cursor: pointer;
 }
-.log-in-btn{
+
+.log-in-btn {
   background-color: $softcta;
+
   &:hover {
     background-color: #9997a9;
     color: white;
   }
 }
-.log-out-btn{
+
+.log-out-btn {
   background-color: #ff8371;
+
   &:hover {
-    background-color:#ffac9f ;
+    background-color: #ffac9f;
     color: white;
   }
 }
 
-.navbar-brand{
+.navbar-brand {
   color: #2f4858;
   font-weight: bold;
   font-size: 2em;
+  font-family: "Great Vibes", cursive; // Optional: apply vintage style
 }

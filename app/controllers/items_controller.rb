@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only: %i[show edit update destroy]
   # Pundit: allow-list approach
   after_action :verify_authorized, except: :index, unless: :skip_pundit?
   # after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
@@ -12,7 +13,6 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
     authorize @item
     @booking = Booking.new
   end
@@ -34,8 +34,21 @@ class ItemsController < ApplicationController
     end
   end
 
+  def edit
+    authorize @item
+  end
+
+  def update
+    @item.user = current_user
+    authorize @item
+    if @item.update(item_params)
+      redirect_to item_path(@item), notice: 'Item was successfully updated.'
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   def destroy
-    @item = Item.find(params[:id])
     @item.user = current_user
     authorize @item
     @item.destroy
@@ -43,6 +56,10 @@ class ItemsController < ApplicationController
   end
 
   private
+
+  def set_item
+    @item = Item.find(params[:id])
+  end
 
   def item_params
     params.require(:item).permit(:title, :description, :price, :photo, :category, :size, :brand)
