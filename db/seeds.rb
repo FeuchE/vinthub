@@ -23,19 +23,14 @@ vintage_styles = ["50s", "60s", "70s", "80s", "90s", "Retro", "Rockabilly", "Mod
 
 items_data = [
   # ... [same 50 items as before] ...
-  { name: "Polka Dot Swing Dress", category: "Dresses" },
-  { name: "Cherry Print Halter Dress", category: "Dresses" },
   { name: "Floral Tea Dress", category: "Dresses" },
   { name: "Plaid Shirt Dress", category: "Dresses" },
-  { name: "Cap Sleeve Wiggle Dress", category: "Dresses" },
   { name: "Tie-Front Blouse", category: "Tops" },
-  { name: "Cap Sleeve Knit Top", category: "Tops" },
+  { name: "Cap Sleeve Top", category: "Tops" },
   { name: "Off-Shoulder Bardot Top", category: "Tops" },
   { name: "Sleeveless Button-Up Blouse", category: "Tops" },
-  { name: "Striped Crop Top", category: "Tops" },
   { name: "Pencil Skirt", category: "Skirts" },
   { name: "Circle Skirt", category: "Skirts" },
-  { name: "Tartan Mini Skirt", category: "Skirts" },
   { name: "Pleated Swing Skirt", category: "Skirts" },
   { name: "Button-Front Cord Skirt", category: "Skirts" },
   { name: "High-Waisted Cuffed Jeans", category: "Jeans" },
@@ -45,33 +40,24 @@ items_data = [
   { name: "Retro Pedal Pushers", category: "Bottoms" },
   { name: "Leather Moto Jacket", category: "Jackets" },
   { name: "Fringe Suede Jacket", category: "Jackets" },
-  { name: "Bolero Shrug", category: "Jackets" },
   { name: "Cropped Denim Jacket", category: "Jackets" },
   { name: "Faux Fur Collar Coat", category: "Jackets" },
   { name: "Creepers", category: "Shoes" },
-  { name: "Peep-Toe Pumps", category: "Shoes" },
   { name: "Saddle Shoes", category: "Shoes" },
   { name: "T-Strap Heels", category: "Shoes" },
   { name: "Platform Mary Janes", category: "Shoes" },
-  { name: "Cat-Eye Glasses", category: "Glasses" },
-  { name: "Retro Clear Lenses", category: "Glasses" },
   { name: "Aviator Sunglasses", category: "Glasses" },
   { name: "Round Wire Glasses", category: "Glasses" },
-  { name: "Tinted Oversized Glasses", category: "Glasses" },
   { name: "Pillbox Hat", category: "Hats" },
-  { name: "Leopard Print Beret", category: "Hats" },
-  { name: "Feather Fascinator", category: "Hats" },
   { name: "Classic Fedora", category: "Hats" },
   { name: "Velvet Cloche Hat", category: "Hats" },
   { name: "Vintage Brooch", category: "Accessories" },
-  { name: "Pearl Choker Necklace", category: "Accessories" },
   { name: "Polka Dot Headscarf", category: "Accessories" },
   { name: "Lace Gloves", category: "Accessories" },
   { name: "Bakelite Bangle Set", category: "Accessories" },
   { name: "Embroidered Cardigan", category: "Tops" },
   { name: "Bow Back Wiggle Dress", category: "Dresses" },
   { name: "Retro Bowling Shirt", category: "Tops" },
-  { name: "Rockabilly Bandana", category: "Accessories" },
   { name: "Swing Coat", category: "Jackets" }
 ].sort_by { |item| item[:name] }
 
@@ -112,17 +98,17 @@ end
 
 puts "Created #{items.count} items."
 
-puts "Creating bookings..."
-10.times do
-  start_date = Faker::Date.forward(days: 30)
-  end_date   = start_date + rand(1..7).days
+# puts "Creating bookings..."
+# 10.times do
+#   start_date = Faker::Date.forward(days: 30)
+#   end_date   = start_date + rand(1..7).days
 
-  Booking.create!(
-    user:       user1,
-    item:       items.sample,
-    start_date: start_date,
-    end_date:   end_date
-  )
-end
+#   Booking.create!(
+#     user:       user1,
+#     item:       items.sample,
+#     start_date: start_date,
+#     end_date:   end_date
+#   )
+# end
 
-puts "Seeding done!"
+# puts "Seeding done!"

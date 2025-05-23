@@ -1,5 +1,4 @@
 class ItemPolicy < ApplicationPolicy
-  before_action :user_is_owner?, only: %i[edit update destroy]
   # NOTE: Up to Pundit v2.3.1, the inheritance was declared as
   # `Scope < Scope` rather than `Scope < ApplicationPolicy::Scope`.
   # In most cases the behavior will be identical, but if updating existing
@@ -19,12 +18,15 @@ class ItemPolicy < ApplicationPolicy
   end
 
   def edit?
+    user_is_owner?
   end
 
   def update?
+    user_is_owner?
   end
 
   def destroy?
+    user_is_owner?
   end
 
   private
