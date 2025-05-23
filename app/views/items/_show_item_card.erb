@@ -17,10 +17,17 @@
         <li><strong>Brand:</strong> <%= brand %></li>
       </ul>
     </div>
-      <hr>
-      <div class='new-booking-container'>
-        <h3>Create a new booking</h3>
-        <%= render 'bookings/booking_form', item: item, booking: booking %>
-      </div>
+    <hr>
+    <div class='new-booking-container'>
+      <h3>Would you like to rent <%= title %>?</h3>
+      <%= render 'bookings/booking_form', item: item, booking: booking %>
+    </div>
+    <div class='delete-link'>
+      <% if policy(item).destroy? %>
+        <%= link_to item_path(item), data: { turbo_method: :delete, confirm: "Are you sure?" }, class: "btn btn-link p-0 m-0 align-baseline" do %>
+          <i class="fa-solid fa-trash"></i>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
