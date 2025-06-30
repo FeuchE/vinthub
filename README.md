@@ -13,7 +13,7 @@ Relove the past with **VintHub!** Have a passion for fashion, but on a budget? D
 
 ---
 
-### The pitch
+## 📣 The pitch
 
 **The problem:**
 I have been invited to a Rockabilly themed party but I have nothing to wear! And I'm on a budget.
