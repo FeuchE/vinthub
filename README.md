@@ -12,7 +12,7 @@ Relove the past with **VintHub!** Have a passion for fashion, but on a budget? D
 - 📆 **Duration:** 1 week sprint
 
 ---
-## 👍 👍 🎉 ⚙️ 📊
+## 👍 👍 🎉 ⚙️ 📊 🌟
 
 ## 📣 The pitch
 
