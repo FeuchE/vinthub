@@ -4,13 +4,12 @@ Borrow Timeless Style
 ## 🌍 Project overview
 Relove the past with **VintHub!** Have a passion for fashion, but on a budget? Discover unique vintage pieces or rent out your own items.
 
-**The goal:** Create a AirBnB clone with a twist!
+- **The goal:** Create a AirBnB clone with a twist!
+- 🛠 **Tech-stack:** Ruby on Rails, JavaScript, HTML, CSS
+- 🛠 **Tools:** Git, PostgreSQL
 ‍
-🛠 **Tech-stack:** Ruby on Rails, JavaScript, HTML, CSS
-🛠 **Tools:** Git, PostgreSQL
-‍
-**Dates:** May 2025
-**Duration:** 1 week sprint
+- **Dates:** May 2025
+- **Duration:** 1 week sprint
 
 ---
 
