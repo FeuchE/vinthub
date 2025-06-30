@@ -44,7 +44,7 @@ I can rent out a whole Rockabilly outfit for the weekend, and put my dress up to
 
 **2. Validations**
 - **Challenge**: One of the biggest challenges was adding all the necessary validations for the bookings model, to ensure users could not create an invalid booking.
-- **Solution**: To solve this problem I added validations to the dates to format them correctly and to check the booking is in the future. I also validated and formatted the duration and price. Lastly, I stopped users booking an item that was already rented out.
+- **Solution**: To solve this problem we added validations to the dates to format them correctly and to check the booking is in the future. We also validated and formatted the duration and price. Lastly, we stopped users booking an item that was already rented out.
 
 **3. Seeding**
 - **Challenge**: Lack of free vintage API.
