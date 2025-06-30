@@ -4,12 +4,12 @@ Borrow Timeless Style
 ## 🌍 Project overview
 Relove the past with **VintHub!** Have a passion for fashion, but on a budget? Discover unique vintage pieces or rent out your own items.
 
-- **The goal:** Create a AirBnB clone with a twist!
+- 🎯 **The goal:** Create a AirBnB clone with a twist!
 - 🛠 **Tech-stack:** Ruby on Rails, JavaScript, HTML, CSS
 - 🛠 **Tools:** Git, PostgreSQL
 ‍
-- **Dates:** May 2025
-- **Duration:** 1 week sprint
+- 📆 **Dates:** May 2025
+- 📆 **Duration:** 1 week sprint
 
 ---
 
@@ -81,7 +81,7 @@ I can rent out a whole Rockabilly outfit for the weekend, and put my dress up to
 
 ---
 
-###💡 Planning
+## 💡 Planning
 
 **User story:**
 We mapped out the key user journeys and the purpose behind each step. We prioritised them as we were working to a tight deadline. Next we selected the path, verb, controller and action for each step to help us set up the back-end. Lastly, we assigned each step to team members, according to their interests and skillsets.
@@ -97,7 +97,7 @@ To collaborate in an agile work environment we created a KanBan board using Gith
 
 ---
 
-###🔧 Building the back-end
+## 🔧 Building the back-end
 
 **Models, Associations and Validations:**
 Next we created the models, based off the DB schema. Worked in pair-programming with Marianna reviewing. We used Devise to setup the user model. The biggest  challenge was adding all the necessary validations for the bookings model, to ensure users could not create an invalid booking. To solve this problem we added validations to the dates to format them correctly and to check the booking is in the future. We also validated and formatted the duration and price. Lastly, we stopped users booking an item that was already rented out.
@@ -117,7 +117,9 @@ To allow users to search through the vintage items based on title, description, 
 **Delete feature:**
 Added delete feature to bookings and items a user has posted with a notification and redirect to the bookings index page.
 
-### Styling the front-end
+---
+
+## 🎨 Styling the front-end
 
 **SCSS:**
 - Using the partials and classes we created in the HTML, we linked corresponding tailored SCSS stylesheets.
@@ -128,7 +130,7 @@ Added delete feature to bookings and items a user has posted with a notification
 
 ---
 
-###🚀 Future plans
+## 🚀 Future plans
 
 As this was a two week sprint we had to prioritse the key user journey, below is a list of features I would like to add in the future to improve the user experience:
 - Filter or group items by category, brand or size on the items index page.
