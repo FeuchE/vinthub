@@ -31,7 +31,50 @@ I can rent out a whole Rockabilly outfit for the weekend, and put my dress up to
 - Search based on title, description, category, brand and size.
 - Manage your bookings in 'My wardrobe'.
 
-### Planning
+## 🚧 Challenges
+
+### What did we struggle with?
+
+**1. Data types**
+- **Challenge**: Assigning the correct data type to each column in the models.
+- **Solution**: Created a DB schema to map out the back-end and assigned data types which we confirmed with a TA before coding.
+
+**2. Validations**
+- **Challenge**: One of the biggest challenges was adding all the necessary validations for the bookings model, to ensure users could not create an invalid booking.
+- **Solution**: To solve this problem I added validations to the dates to format them correctly and to check the booking is in the future. I also validated and formatted the duration and price. Lastly, I stopped users booking an item that was already rented out.
+
+**3. Seeding**
+- **Challenge**: Lack of free vintage API.
+- **Solution**: Overcame seeding-related challenges and lack of vintage API by using faker and sourced vintage images and renamed them to extact name on the product to be able to link them.
+
+**4. Time and people management**
+- **Challenge**: This was our first group project with only one week in which to complete it.
+- **Solution**: To collaborate in an agile work environment we created a KanBan board using Github projects. This helped us to keep track of the progress of the project and make a plan for everyone that maximised efficiency and prioritised urgent tasks. 
+
+## 🏆 Accomplishments
+
+### What did we learn?
+
+**✅Technical Skills:**
+- Ruby models, controllers and routing
+- HTML for views to build structure of the webpages
+- Git version control and code reviewing practices
+- Accessibility implementation best practices
+- Responsive design
+
+**✅Design Skills:**
+- SCSS stlying using partials, nesting and chaining
+- Creating inclusive user experiences
+- Balancing information density with usability
+- Building trust through transparent design
+- Color theory and contrast for accessibility
+
+**✅Problem-Solving:**
+- Used DB schema to visualise the back-end structure
+- Breaking down large problems into actionable solutions
+- Prioritizing features for maximum impact
+
+###💡 Planning
 
 **User story:**
 We mapped out the key user journeys and the purpose behind each step. We prioritised them as we were working to a tight deadline. Next we selected the path, verb, controller and action for each step to help us set up the back-end. Lastly, we assigned each step to team members, according to their interests and skillsets.
@@ -45,7 +88,7 @@ Before diving into coding, we created a mock-up of our final design for our key 
 **Kanban board and slack channel:**
 To collaborate in an agile work environment we created a KanBan board using Github projects. This helped us to visualise the tasks that needed to be completed and keep track of the progress of the project during our morning stand-up and make a plan for everyone for the coming day that maximised efficiency and prioritised urgent tasks. We also used a dedicated slack channel for communications throughout the project.
 
-### Building the back-end
+###🔧 Building the back-end
 
 **Models, Associations and Validations:**
 Next we created the models, based off the DB schema. Worked in pair-programming with Marianna reviewing. We used Devise to setup the user model. The biggest  challenge was adding all the necessary validations for the bookings model, to ensure users could not create an invalid booking. To solve this problem we added validations to the dates to format them correctly and to check the booking is in the future. We also validated and formatted the duration and price. Lastly, we stopped users booking an item that was already rented out.
@@ -74,7 +117,7 @@ Added delete feature to bookings and items a user has posted with a notification
 - We changed the colour and styling of the CTA buttons so they stand out but still fit into the colour scheme.
 - To ensure my code is clean, organised and easy to read we utilised SCSS partials, nesting and chaining.
 
-### Future plans
+###🚀 Future plans
 
 As this was a two week sprint we had to prioritse the key user journey, below is a list of features I would like to add in the future to improve the user experience:
 - Filter or group items by category, brand or size on the items index page.
