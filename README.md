@@ -12,6 +12,8 @@ Relove the past with **VintHub!** Have a passion for fashion, but on a budget? D
 **Dates:** May 2025
 **Duration:** 1 week sprint
 
+---
+
 ### The pitch
 
 **The problem:**
@@ -30,6 +32,8 @@ I can rent out a whole Rockabilly outfit for the weekend, and put my dress up to
 - Rent out items or put your own up for rent.
 - Search based on title, description, category, brand and size.
 - Manage your bookings in 'My wardrobe'.
+
+---
 
 ## 🚧 Challenges
 
@@ -50,6 +54,8 @@ I can rent out a whole Rockabilly outfit for the weekend, and put my dress up to
 **4. Time and people management**
 - **Challenge**: This was our first group project with only one week in which to complete it.
 - **Solution**: To collaborate in an agile work environment we created a KanBan board using Github projects. This helped us to keep track of the progress of the project and make a plan for everyone that maximised efficiency and prioritised urgent tasks. 
+
+---
 
 ## 🏆 Accomplishments
 
@@ -74,6 +80,8 @@ I can rent out a whole Rockabilly outfit for the weekend, and put my dress up to
 - Breaking down large problems into actionable solutions
 - Prioritizing features for maximum impact
 
+---
+
 ###💡 Planning
 
 **User story:**
@@ -87,6 +95,8 @@ Before diving into coding, we created a mock-up of our final design for our key 
 
 **Kanban board and slack channel:**
 To collaborate in an agile work environment we created a KanBan board using Github projects. This helped us to visualise the tasks that needed to be completed and keep track of the progress of the project during our morning stand-up and make a plan for everyone for the coming day that maximised efficiency and prioritised urgent tasks. We also used a dedicated slack channel for communications throughout the project.
+
+---
 
 ###🔧 Building the back-end
 
@@ -116,6 +126,8 @@ Added delete feature to bookings and items a user has posted with a notification
 - We used flexbox to arrange and align the image and content within the cards to ensure responsive layouts.
 - We changed the colour and styling of the CTA buttons so they stand out but still fit into the colour scheme.
 - To ensure my code is clean, organised and easy to read we utilised SCSS partials, nesting and chaining.
+
+---
 
 ###🚀 Future plans
 
