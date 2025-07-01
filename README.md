@@ -19,8 +19,8 @@ Relove the past with **VintHub!** Have a passion for fashion, but on a budget? D
 I have been invited to a Rockabilly themed party but I have nothing to wear! And I'm on a budget.
 
 **The solution:**
-My fairy godmother VintHub is here to save my cinderella day! 
-I can rent out a whole Rockabilly outfit for the weekend, and put my dress up to rent to make a bit of extra cash for the party!
+My fairy godmother VintHub is here to save my Cinderella day! 
+I can rent out a whole Rockabilly outfit for the weekend, and put my dress up to rent to fund my new outfit!
 
 **The target audience:**
 - Demographic: 20-60 year old vintage lovers. 
